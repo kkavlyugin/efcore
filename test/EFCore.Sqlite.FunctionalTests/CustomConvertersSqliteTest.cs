@@ -101,7 +101,7 @@ WHERE ""b"".""IsVisible"" = 'Y'");
             AssertSql(
                 @"SELECT ""b"".""BlogId"", ""b"".""Discriminator"", ""b"".""IndexerVisible"", ""b"".""IsVisible"", ""b"".""Url"", ""b"".""RssUrl""
 FROM ""Blog"" AS ""b""
-WHERE ""b"".""IndexerVisible"" <> 'Aye'");
+WHERE ""b"".""IndexerVisible"" = 'Nay'");
         }
 
         private void AssertSql(params string[] expected)

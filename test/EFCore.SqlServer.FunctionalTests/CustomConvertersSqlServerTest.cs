@@ -260,7 +260,7 @@ WHERE [b].[IsVisible] = N'Y'");
             AssertSql(
                 @"SELECT [b].[BlogId], [b].[Discriminator], [b].[IndexerVisible], [b].[IsVisible], [b].[Url], [b].[RssUrl]
 FROM [Blog] AS [b]
-WHERE [b].[IndexerVisible] <> N'Aye'");
+WHERE [b].[IndexerVisible] = N'Nay'");
         }
 
         public override void Object_to_string_conversion()
